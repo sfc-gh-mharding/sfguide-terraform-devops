@@ -56,11 +56,6 @@ resource "snowflake_table" "table" {
     }
   }
 
-  column {
-    name     = "data"
-    type     = "text"
-    nullable = false
-  }
 
   column {
     name = "DATE"

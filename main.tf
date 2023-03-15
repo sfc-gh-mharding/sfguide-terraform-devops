@@ -22,3 +22,4 @@ resource "snowflake_database" "tf_devops_demo_db" {
   name    = "TF_DEVOPS_DEMO_DB"
   comment = "Database for Snowflake Terraform demo"
 }
+

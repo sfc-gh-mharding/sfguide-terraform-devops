@@ -30,12 +30,12 @@ resource "snowflake_schema" "demo" {
 }
 
 resource "snowflake_table" "tab1" {
-  database            = snowflake_schema.schema.database
-  schema              = snowflake_schema.schema.name
+  database            = snowflake_schema.demo.database
+  schema              = snowflake_schema.demo.name
   name                = "TABLE1"
   comment             = "A table."
   cluster_by          = ["to_date(DATE)"]
-  data_retention_days = snowflake_schema.schema.data_retention_days
+  data_retention_days = snowflake_schema.demo.data_retention_days
   change_tracking     = false
 
   column {
